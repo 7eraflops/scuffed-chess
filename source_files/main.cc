@@ -1,46 +1,51 @@
 #include <iostream>
 #include <stdio.h>
 using namespace std;
-void draw_board()
+void draw_board(char board[10][10])
 {
-    int field = 1;
-    for (int i = 1; i <= 30; i++)
+    int field = 0;
+    int x = 0;
+    int y = 0;
+    for (int i = 0; i < 30; i++)
     {
-        for (int j = 1; j <= 30; j++)
+        for (int j = 0; j < 30; j++)
         {
-            if (field % 2 == 0)
+            char figure = board[x][y];
+            if (figure == ' ')
             {
-                cout << "\u2588"
-                     << "\u2588";
+                if (field % 2 == 0)
+                {
+                    cout << "\u2588" /* \u2588 is the unicode code for a white box */
+                         << "\u2588";
+                }
+                else
+                {
+                    cout << ' '
+                         << ' ';
+                }
             }
             else
             {
-                cout << " "
-                     << " ";
+                cout << 'A'
+                     << 'A';
             }
-            if (j % 3 == 0)
+            if ((j - 2) % 3 == 0)
             {
                 field++;
+                y++;
             }
         }
-        if (i % 3 == 0)
+        if ((i - 2) % 3 == 0)
         {
             field++;
+            x++;
         }
+        y = 0;
         cout << endl;
     }
 }
-int main()
+void randomizer(char board[10][10])
 {
-    srand(time(NULL));
-    char board[10][10];
-    for (int i = 0; i < 10; i++)
-    {
-        for (int j = 0; j < 10; j++)
-        {
-            board[i][j] = ' ';
-        }
-    }
     char figure = ' ';
     for (int i = 0; i < 4; i++)
     {
@@ -75,11 +80,32 @@ int main()
             }
         }
     }
+}
+int main()
+{
+    srand(time(NULL));
+    char board[10][10];
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
         {
-            cout << board[i][j] << " ";
+            board[i][j] = ' ';
+        }
+    }
+    randomizer(board);
+    draw_board(board);
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            if (board[i][j] == ' ')
+            {
+                cout << '_';
+            }
+            else
+            {
+                cout << board[i][j];
+            }
         }
         cout << endl;
     }
