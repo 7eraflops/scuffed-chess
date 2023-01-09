@@ -32,19 +32,19 @@ void draw_board(char board[10][10])
                     {
                     case 'p':
                         cout << "\u2659"
-                             << "\u2659";
+                             << "p";
                         break;
                     case 'n':
                         cout << "\u2658"
-                             << "\u2658";
+                             << "n";
                         break;
                     case 'r':
                         cout << "\u2656"
-                             << "\u2656";
+                             << "r";
                         break;
                     case 'k':
                         cout << "\u2654"
-                             << "\u2654";
+                             << "k";
                         break;
                     }
                 }
