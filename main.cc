@@ -1,14 +1,14 @@
 #include <iostream>
-#include <stdio.h>
+#include <randomizer.h>
 using namespace std;
-void draw_board(char board[10][10])
+void draw_board(char board[8][8])
 {
     int field = 0;
     int x = 0;
     int y = 0;
-    for (int i = 0; i < 30; i++)
+    for (int i = 0; i < 24; i++)
     {
-        for (int j = 0; j < 30; j++)
+        for (int j = 0; j < 24; j++)
         {
             char figure = board[x][y];
             if (figure == ' ')
@@ -77,50 +77,13 @@ void draw_board(char board[10][10])
         cout << endl;
     }
 }
-void randomizer(char board[10][10])
-{
-    char figure = ' ';
-    for (int i = 0; i < 4; i++)
-    {
-        switch (i)
-        {
-        case 0:
-            figure = 'p';
-            break;
-        case 1:
-            figure = 'n';
-            break;
-        case 2:
-            figure = 'r';
-            break;
-        case 3:
-            figure = 'k';
-            break;
-        }
-        bool assigned = false;
-        while (!assigned)
-        {
-            int x = rand() % 10;
-            int y = rand() % 10;
-            if (board[x][y] == ' ')
-            {
-                board[x][y] = figure;
-                assigned = true;
-            }
-            else
-            {
-                continue;
-            }
-        }
-    }
-}
 int main()
 {
     srand(time(NULL));
-    char board[10][10];
-    for (int i = 0; i < 10; i++)
+    char board[8][8];
+    for (int i = 0; i < 8; i++)
     {
-        for (int j = 0; j < 10; j++)
+        for (int j = 0; j < 8; j++)
         {
             board[i][j] = ' ';
         }
