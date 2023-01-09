@@ -26,8 +26,41 @@ void draw_board(char board[10][10])
             }
             else
             {
-                cout << 'A'
-                     << 'A';
+                if ((j - 1) % 3 == 0 && (i - 4) % 3 == 0)
+                {
+                    switch (figure)
+                    {
+                    case 'p':
+                        cout << "\u2659"
+                             << "\u2659";
+                        break;
+                    case 'n':
+                        cout << "\u2658"
+                             << "\u2658";
+                        break;
+                    case 'r':
+                        cout << "\u2656"
+                             << "\u2656";
+                        break;
+                    case 'k':
+                        cout << "\u2654"
+                             << "\u2654";
+                        break;
+                    }
+                }
+                else
+                {
+                    if (field % 2 == 0)
+                    {
+                        cout << "\u2588" /* \u2588 is the unicode code for a white box */
+                             << "\u2588";
+                    }
+                    else
+                    {
+                        cout << ' '
+                             << ' ';
+                    }
+                }
             }
             if ((j - 2) % 3 == 0)
             {
@@ -94,19 +127,4 @@ int main()
     }
     randomizer(board);
     draw_board(board);
-    for (int i = 0; i < 10; i++)
-    {
-        for (int j = 0; j < 10; j++)
-        {
-            if (board[i][j] == ' ')
-            {
-                cout << '_';
-            }
-            else
-            {
-                cout << board[i][j];
-            }
-        }
-        cout << endl;
-    }
 }
