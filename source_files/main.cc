@@ -1,16 +1,8 @@
 #include <iostream>
 #include <stdio.h>
 using namespace std;
-int main()
+void draw_board()
 {
-    string board[10][10];
-    for (int i = 0; i < 10; i++)
-    {
-        for (int j = 0; j < 10; j++)
-        {
-            board[i][j] = 'A';
-        }
-    }
     int field = 1;
     for (int i = 1; i <= 30; i++)
     {
@@ -37,5 +29,58 @@ int main()
         }
         cout << endl;
     }
-    cout << "\u2655" << endl;
+}
+int main()
+{
+    srand(time(NULL));
+    char board[10][10];
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            board[i][j] = ' ';
+        }
+    }
+    char figure = ' ';
+    for (int i = 0; i < 4; i++)
+    {
+        switch (i)
+        {
+        case 0:
+            figure = 'p';
+            break;
+        case 1:
+            figure = 'n';
+            break;
+        case 2:
+            figure = 'r';
+            break;
+        case 3:
+            figure = 'k';
+            break;
+        }
+        bool assigned = false;
+        while (!assigned)
+        {
+            int x = rand() % 10;
+            int y = rand() % 10;
+            if (board[x][y] == ' ')
+            {
+                board[x][y] = figure;
+                assigned = true;
+            }
+            else
+            {
+                continue;
+            }
+        }
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            cout << board[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
