@@ -1,2 +1,2 @@
-# Empty dependencies file for app.out.
+# Empty dependencies file for chess.out.
 # This may be replaced when dependencies are built.

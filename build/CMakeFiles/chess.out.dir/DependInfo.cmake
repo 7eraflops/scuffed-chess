@@ -8,8 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/teraflops/chess/source_files/main.cc" "CMakeFiles/app.out.dir/source_files/main.cc.o" "gcc" "CMakeFiles/app.out.dir/source_files/main.cc.o.d"
-  "/home/teraflops/chess/source_files/randomizer.cc" "CMakeFiles/app.out.dir/source_files/randomizer.cc.o" "gcc" "CMakeFiles/app.out.dir/source_files/randomizer.cc.o.d"
+  "/home/teraflops/chess/drawboard.cc" "CMakeFiles/chess.out.dir/drawboard.cc.o" "gcc" "CMakeFiles/chess.out.dir/drawboard.cc.o.d"
+  "/home/teraflops/chess/main.cc" "CMakeFiles/chess.out.dir/main.cc.o" "gcc" "CMakeFiles/chess.out.dir/main.cc.o.d"
+  "/home/teraflops/chess/randomizer.cc" "CMakeFiles/chess.out.dir/randomizer.cc.o" "gcc" "CMakeFiles/chess.out.dir/randomizer.cc.o.d"
   )
 
 # Targets to which this target links.

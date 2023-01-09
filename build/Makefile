@@ -117,65 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named app.out
+# Target rules for targets named chess.out
 
 # Build rule for target.
-app.out: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app.out
-.PHONY : app.out
+chess.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chess.out
+.PHONY : chess.out
 
 # fast build rule for target.
-app.out/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.out.dir/build.make CMakeFiles/app.out.dir/build
-.PHONY : app.out/fast
+chess.out/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/build
+.PHONY : chess.out/fast
 
-source_files/main.o: source_files/main.cc.o
-.PHONY : source_files/main.o
-
-# target to build an object file
-source_files/main.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.out.dir/build.make CMakeFiles/app.out.dir/source_files/main.cc.o
-.PHONY : source_files/main.cc.o
-
-source_files/main.i: source_files/main.cc.i
-.PHONY : source_files/main.i
-
-# target to preprocess a source file
-source_files/main.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.out.dir/build.make CMakeFiles/app.out.dir/source_files/main.cc.i
-.PHONY : source_files/main.cc.i
-
-source_files/main.s: source_files/main.cc.s
-.PHONY : source_files/main.s
-
-# target to generate assembly for a file
-source_files/main.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.out.dir/build.make CMakeFiles/app.out.dir/source_files/main.cc.s
-.PHONY : source_files/main.cc.s
-
-source_files/randomizer.o: source_files/randomizer.cc.o
-.PHONY : source_files/randomizer.o
+drawboard.o: drawboard.cc.o
+.PHONY : drawboard.o
 
 # target to build an object file
-source_files/randomizer.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.out.dir/build.make CMakeFiles/app.out.dir/source_files/randomizer.cc.o
-.PHONY : source_files/randomizer.cc.o
+drawboard.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/drawboard.cc.o
+.PHONY : drawboard.cc.o
 
-source_files/randomizer.i: source_files/randomizer.cc.i
-.PHONY : source_files/randomizer.i
+drawboard.i: drawboard.cc.i
+.PHONY : drawboard.i
 
 # target to preprocess a source file
-source_files/randomizer.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.out.dir/build.make CMakeFiles/app.out.dir/source_files/randomizer.cc.i
-.PHONY : source_files/randomizer.cc.i
+drawboard.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/drawboard.cc.i
+.PHONY : drawboard.cc.i
 
-source_files/randomizer.s: source_files/randomizer.cc.s
-.PHONY : source_files/randomizer.s
+drawboard.s: drawboard.cc.s
+.PHONY : drawboard.s
 
 # target to generate assembly for a file
-source_files/randomizer.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.out.dir/build.make CMakeFiles/app.out.dir/source_files/randomizer.cc.s
-.PHONY : source_files/randomizer.cc.s
+drawboard.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/drawboard.cc.s
+.PHONY : drawboard.cc.s
+
+main.o: main.cc.o
+.PHONY : main.o
+
+# target to build an object file
+main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/main.cc.o
+.PHONY : main.cc.o
+
+main.i: main.cc.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/main.cc.i
+.PHONY : main.cc.i
+
+main.s: main.cc.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/main.cc.s
+.PHONY : main.cc.s
+
+randomizer.o: randomizer.cc.o
+.PHONY : randomizer.o
+
+# target to build an object file
+randomizer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/randomizer.cc.o
+.PHONY : randomizer.cc.o
+
+randomizer.i: randomizer.cc.i
+.PHONY : randomizer.i
+
+# target to preprocess a source file
+randomizer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/randomizer.cc.i
+.PHONY : randomizer.cc.i
+
+randomizer.s: randomizer.cc.s
+.PHONY : randomizer.s
+
+# target to generate assembly for a file
+randomizer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess.out.dir/build.make CMakeFiles/chess.out.dir/randomizer.cc.s
+.PHONY : randomizer.cc.s
 
 # Help Target
 help:
@@ -185,13 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... app.out"
-	@echo "... source_files/main.o"
-	@echo "... source_files/main.i"
-	@echo "... source_files/main.s"
-	@echo "... source_files/randomizer.o"
-	@echo "... source_files/randomizer.i"
-	@echo "... source_files/randomizer.s"
+	@echo "... chess.out"
+	@echo "... drawboard.o"
+	@echo "... drawboard.i"
+	@echo "... drawboard.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... randomizer.o"
+	@echo "... randomizer.i"
+	@echo "... randomizer.s"
 .PHONY : help
 
 

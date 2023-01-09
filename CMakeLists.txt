@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13) 
 project(chess.out) 
-set(SOURCE_FILES source_files/main.cc source_files/randomizer.cc source_files/randomizer.h)
+set(SOURCE_FILES main.cc randomizer.cc randomizer.h drawboard.cc drawboard.h)
 
-add_executable(app.out ${SOURCE_FILES})
+add_executable(chess.out ${SOURCE_FILES})
