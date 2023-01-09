@@ -1,9 +1,9 @@
 #include <iostream>
+#include <stdio.h>
 using namespace std;
-
 int main()
 {
-    char board[10][10];
+    string board[10][10];
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
@@ -11,15 +11,31 @@ int main()
             board[i][j] = 'A';
         }
     }
-    cout << "_______________________" << endl;
-    for (int i = 0; i < 10; i++)
+    int field = 1;
+    for (int i = 1; i <= 30; i++)
     {
-        cout << "| ";
-        for (int j = 0; j < 10; j++)
+        for (int j = 1; j <= 30; j++)
         {
-            cout << board[i][j] << " ";
+            if (field % 2 == 0)
+            {
+                cout << "\u2588"
+                     << "\u2588";
+            }
+            else
+            {
+                cout << " "
+                     << " ";
+            }
+            if (j % 3 == 0)
+            {
+                field++;
+            }
         }
-        cout << "|" << endl;
+        if (i % 3 == 0)
+        {
+            field++;
+        }
+        cout << endl;
     }
-    cout << "_______________________" << endl;
+    cout << "\u2655" << endl;
 }
