@@ -1,5 +1,4 @@
 #include <iostream>
-#include <unistd.h>
 
 #include "figure.h"
 #include "randomizer.h"
