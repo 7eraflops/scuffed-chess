@@ -24,9 +24,9 @@ void randomizer(char board[8][8], figure figures[4])
         {
             int x = rand() % 8;
             int y = rand() % 8;
-            if (board[x][y] == ' ')
+            if (board[y][x] == ' ')
             {
-                board[x][y] = figure;
+                board[y][x] = figure;
                 figures[i].x = x;
                 figures[i].y = y;
                 assigned = true;

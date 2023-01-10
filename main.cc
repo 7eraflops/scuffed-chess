@@ -1,9 +1,9 @@
 #include <iostream>
+#include <unistd.h>
 
 #include "figure.h"
 #include "randomizer.h"
 #include "drawboard.h"
-#include "pawn.h"
 
 using namespace std;
 
@@ -19,10 +19,10 @@ int main()
             board[i][j] = ' ';
         }
     }
-
     randomizer(board, figures);
     drawboard(board);
-    pawn(board, figures[0].x, figures[0].y);
-    cout << endl;
-    drawboard(board);
+    for (int i = 0; i < 4; i++)
+    {
+        cout << figures[i].x + 1 << "\t" << figures[i].y + 1 << endl;
+    }
 }
