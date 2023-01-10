@@ -1,5 +1,5 @@
 #include "randomizer.h"
-void randomizer(char board[8][8])
+void randomizer(char board[8][8], figure figures[4])
 {
     char figure = ' ';
     for (int i = 0; i < 4; i++)
@@ -27,6 +27,8 @@ void randomizer(char board[8][8])
             if (board[x][y] == ' ')
             {
                 board[x][y] = figure;
+                figures[i].x = x;
+                figures[i].y = y;
                 assigned = true;
             }
             else
