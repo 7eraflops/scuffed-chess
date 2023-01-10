@@ -1,4 +1,4 @@
-#include "randomizer.h"
+#include "randomizer.hpp"
 void randomizer(char board[8][8], figure figures[4])
 {
     char figure = ' ';

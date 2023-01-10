@@ -1,5 +1,5 @@
-#ifndef FIGURE_H
-#define FIGURE_H
+#ifndef FIGURE_HPP
+#define FIGURE_HPP
 #include <iostream>
 struct figure
 {

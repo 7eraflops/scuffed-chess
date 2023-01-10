@@ -91,7 +91,7 @@ int main()
         case 'k':
             figure_number = 3;
             cin >> move;
-            //TODO: knight function
+            // TODO: knight function
             drawboard(board);
             break;
         }

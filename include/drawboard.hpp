@@ -1,5 +1,5 @@
-#ifndef DRAWBOARD_H
-#define DRAWBOARD_H
+#ifndef DRAWBOARD_HPP
+#define DRAWBOARD_HPP
 #include <iostream>
 using namespace std;
 extern void drawboard(char board[8][8]);
