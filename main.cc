@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "figure.h"
 #include "randomizer.h"
@@ -47,7 +48,7 @@ void instructions()
 
 int main()
 {
-    figure figures[4]; // 1 = Pawn, 2 = kNight, 3 = Rook, 4 = King
+    figure figures[4]; // 0 = Pawn, 1 = kNight, 2 = Rook, 3 = King
     srand(time(NULL));
     char board[8][8];
     for (int i = 0; i < 8; i++)
@@ -61,4 +62,38 @@ int main()
     welcome();
     instructions();
     drawboard(board);
+
+    char figure_choice;
+    int figure_number;
+    string move;
+    while (true)
+    {
+        cin >> figure_choice;
+        switch (figure_choice)
+        {
+        case 'p':
+            figure_number = 0;
+            // TODO: pawn function
+            drawboard(board);
+            break;
+        case 'n':
+            figure_number = 1;
+            cin >> move;
+            // TODO: knight function
+            drawboard(board);
+            break;
+        case 'r':
+            figure_number = 2;
+            cin >> move;
+            // TODO: pawn function
+            drawboard(board);
+            break;
+        case 'k':
+            figure_number = 3;
+            cin >> move;
+            //TODO: knight function
+            drawboard(board);
+            break;
+        }
+    }
 }
