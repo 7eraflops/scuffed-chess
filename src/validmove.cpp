@@ -1,4 +1,4 @@
-#include "validmove.h"
+#include "validmove.hpp"
 bool validmove(char board[8][8], int next_x, int next_y)
 {
     bool valid = false;

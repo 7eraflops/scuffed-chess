@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 
-#include "figure.h"
-#include "randomizer.h"
-#include "drawboard.h"
+#include "figure.hpp"
+#include "randomizer.hpp"
+#include "drawboard.hpp"
 
 using namespace std;
 void welcome()
