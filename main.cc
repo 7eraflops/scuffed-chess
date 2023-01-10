@@ -1,7 +1,16 @@
 #include <iostream>
+
 #include "randomizer.h"
 #include "drawboard.h"
+#include "pawn.h"
+
 using namespace std;
+
+struct figure
+{
+    int x;
+    int y;
+} p, n, r, k; // Pawn, kNight, Rook, King
 int main()
 {
     srand(time(NULL));
@@ -13,6 +22,10 @@ int main()
             board[i][j] = ' ';
         }
     }
+
     randomizer(board);
+    drawboard(board);
+    pawn(board, 1, 1);
+    cout << endl;
     drawboard(board);
 }

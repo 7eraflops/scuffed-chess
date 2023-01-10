@@ -1,3 +1,0 @@
-/home/teraflops/chess/build/CMakeFiles/chess.out.dir
-/home/teraflops/chess/build/CMakeFiles/edit_cache.dir
-/home/teraflops/chess/build/CMakeFiles/rebuild_cache.dir

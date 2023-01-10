@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/chess.out.dir/main.cc.o CMakeFiles/chess.out.dir/randomizer.cc.o CMakeFiles/chess.out.dir/drawboard.cc.o -o chess.out 
