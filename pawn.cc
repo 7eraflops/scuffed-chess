@@ -1,4 +1,4 @@
-#include "pawn_f.h"
+#include "pawn.h"
 void pawn(char board[8][8], int x, int y)
 {
     bool moved = false;
