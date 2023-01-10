@@ -8,7 +8,7 @@ void drawboard(char board[8][8])
     {
         for (int j = 0; j < 24; j++)
         {
-            char figure = board[x][y];
+            char figure = board[y][x];
             if (figure == ' ')
             {
                 if (field % 2 == 0)
@@ -63,15 +63,15 @@ void drawboard(char board[8][8])
             if ((j - 2) % 3 == 0)
             {
                 field++;
-                y++;
+                x++;
             }
         }
         if ((i - 2) % 3 == 0)
         {
             field++;
-            x++;
+            y++;
         }
-        y = 0;
+        x = 0;
         cout << endl;
     }
 }
