@@ -6,6 +6,7 @@
 #include "randomizer.hpp"
 #include "drawboard.hpp"
 #include "pawn.hpp"
+#include "rook.hpp"
 
 using namespace std;
 void welcome()
@@ -85,11 +86,11 @@ int main()
                 break;
             case 'r':
                 cin >> move;
-                // TODO: rook function
+                rook(board, figures, move, moved_ptr);
                 break;
             case 'k':
                 cin >> move;
-                // TODO: knight function
+                // TODO: king function
                 break;
             }
             if (!moved)
