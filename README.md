@@ -6,8 +6,7 @@ You have 4 randomly placed figures at your disposal:
 - a rook (r)
 - a king (k)
 
-You can choose them by pressing the keys in parantheses. Input x if you want to change your choice
-After choosing a figure you can input the desired move according to these rules:
+You can choose them by pressing the keys in parantheses. After choosing a figure you can input the desired move according to these rules:
 - pawn: no input necessary, it'll just move forward 1 space
 
 - knight: input a combination of 2 letters from (f - forward b - back l - left r - right) like: fl
@@ -20,7 +19,7 @@ After choosing a figure you can input the desired move according to these rules:
 - king: input a number to choose a space to move the king onto.
   The spaces are numbered clockwise staring from the top, like this:
   8  1  2  
-  7     3  
+  7  K  3  
   6  5  4  
 
 You can't move onto other pawns, or try to move outside the board,
