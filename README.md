@@ -1,12 +1,12 @@
-# Scuffed Chess
-Welcome to Scuffed Chess!
+# Welcome to Scuffed Chess!
+
 You have 4 randomly placed figures at your disposal:
 - a pawn (p)
 - a knight (n)
 - a rook (r)
 - a king (k)
-You can choose them by pressing the keys in parantheses
-Input x if you want to change your choice
+
+You can choose them by pressing the keys in parantheses. Input x if you want to change your choice
 After choosing a figure you can input the desired move according to these rules:
 - pawn: no input necessary, it'll just move forward 1 space
 
@@ -19,9 +19,9 @@ After choosing a figure you can input the desired move according to these rules:
 
 - king: input a number to choose a space to move the king onto.
   The spaces are numbered clockwise staring from the top, like this:
-  8  1  2
-  7     3
-  6  5  4
+  8  1  2  
+  7     3  
+  6  5  4  
 
 You can't move onto other pawns, or try to move outside the board,
 except for the pawn which will roll back to the bottom after reaching the top
