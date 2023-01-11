@@ -15,7 +15,7 @@ int main()
             board[i][j] = ' ';
         }
     }
-    
+
     randomizer(board, figures);
     welcome();
     instructions();
@@ -46,7 +46,7 @@ int main()
                 break;
             case 'n':
                 cin >> move;
-                // TODO: knight function
+                knight(board, figures, move, moved_ptr);
                 break;
             case 'r':
                 cin >> move;
