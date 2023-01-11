@@ -17,7 +17,7 @@ You can choose them by pressing the keys in parantheses. After choosing a figure
 - rook: input f, b, l, r followed by the number of spaces you want to move in that direction
 
 - king: input a number to choose a space to move the king onto.
-  The spaces are numbered clockwise staring from the top, like this:
+  The spaces are numbered clockwise staring from the top, like this:  
   8  1  2  
   7  K  3  
   6  5  4  
