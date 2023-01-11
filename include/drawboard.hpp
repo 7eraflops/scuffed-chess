@@ -35,21 +35,21 @@ void drawboard(char board[8][8])
                 {
                     switch (figure)
                     {
-                    case 'p':
+                    case 'P':
                         cout << "\u2659"
-                             << "p";
+                             << "P";
                         break;
-                    case 'n':
+                    case 'N':
                         cout << "\u2658"
-                             << "n";
+                             << "N";
                         break;
-                    case 'r':
+                    case 'R':
                         cout << "\u2656"
-                             << "r";
+                             << "R";
                         break;
-                    case 'k':
+                    case 'K':
                         cout << "\u2654"
-                             << "k";
+                             << "K";
                         break;
                     }
                 }

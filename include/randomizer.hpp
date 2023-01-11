@@ -9,16 +9,16 @@ void randomizer(char board[8][8], figure figures[4])
         switch (i)
         {
         case 0:
-            figure = 'p';
+            figure = 'P';
             break;
         case 1:
-            figure = 'n';
+            figure = 'N';
             break;
         case 2:
-            figure = 'r';
+            figure = 'R';
             break;
         case 3:
-            figure = 'k';
+            figure = 'K';
             break;
         }
         bool assigned = false;
