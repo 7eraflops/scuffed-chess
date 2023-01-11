@@ -6,6 +6,7 @@
 #include "drawboard.hpp"
 #include "pawn.hpp"
 #include "rook.hpp"
+#include "king.hpp"
 
 using namespace std;
 void welcome()
@@ -66,6 +67,7 @@ int main()
             board[i][j] = ' ';
         }
     }
+    
     randomizer(board, figures);
     welcome();
     instructions();
@@ -104,7 +106,7 @@ int main()
                 break;
             case 'k':
                 cin >> move;
-                // TODO: king function
+                king(board, figures, move[0], moved_ptr);
                 break;
             }
             if (!moved)
