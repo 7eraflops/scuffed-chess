@@ -4,6 +4,7 @@
 #include "figure.hpp"
 #include "randomizer.hpp"
 #include "drawboard.hpp"
+#include "pawn.hpp"
 
 using namespace std;
 void welcome()
@@ -73,7 +74,7 @@ int main()
         {
         case 'p':
             figure_number = 0;
-            // TODO: pawn function
+            pawn(board, figures);
             drawboard(board);
             break;
         case 'n':
