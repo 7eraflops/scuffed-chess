@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <unistd.h>
 
 #include "figure.hpp"
 #include "randomizer.hpp"
@@ -65,36 +66,45 @@ int main()
     drawboard(board);
 
     char figure_choice;
-    int figure_number;
     string move;
     while (true)
     {
-        cin >> figure_choice;
-        switch (figure_choice)
+        bool moved = false;
+        bool *moved_ptr = &moved;
+        while (!moved)
         {
-        case 'p':
-            figure_number = 0;
-            pawn(board, figures);
-            drawboard(board);
-            break;
-        case 'n':
-            figure_number = 1;
-            cin >> move;
-            // TODO: knight function
-            drawboard(board);
-            break;
-        case 'r':
-            figure_number = 2;
-            cin >> move;
-            // TODO: pawn function
-            drawboard(board);
-            break;
-        case 'k':
-            figure_number = 3;
-            cin >> move;
-            // TODO: knight function
-            drawboard(board);
-            break;
+            cin >> figure_choice;
+            switch (figure_choice)
+            {
+            case 'p':
+                pawn(board, figures, moved_ptr);
+                break;
+            case 'n':
+                cin >> move;
+                // TODO: knight function
+                break;
+            case 'r':
+                cin >> move;
+                // TODO: rook function
+                break;
+            case 'k':
+                cin >> move;
+                // TODO: knight function
+                break;
+            }
+            if (!moved)
+            {
+                sleep(3);
+                system("clear");
+                welcome();
+                drawboard(board);
+            }
+            else
+            {
+                system("clear");
+                welcome();
+                drawboard(board);
+            }
         }
     }
 }

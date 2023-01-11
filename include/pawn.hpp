@@ -4,7 +4,7 @@
 #include "figure.hpp"
 #include "validmove.hpp"
 using namespace std;
-void pawn(char board[8][8], figure figures[4])
+void pawn(char board[8][8], figure figures[4], bool *moved)
 {
     int x = figures[0].x;
     int y = figures[0].y;
@@ -16,6 +16,7 @@ void pawn(char board[8][8], figure figures[4])
             board[next_y][x] = board[y][x];
             board[y][x] = ' ';
             figures[0].y = next_y;
+            *moved = true;
         }
         else
         {
@@ -30,6 +31,7 @@ void pawn(char board[8][8], figure figures[4])
             board[next_y][x] = board[y][x];
             board[y][x] = ' ';
             figures[0].y = next_y;
+            *moved = true;
         }
         else
         {
