@@ -6,10 +6,6 @@ void draw_board(char board[8][8])
     int y = 0;
     for (int i = 0; i < 24; i++)
     {
-        for (int i = 0; i < 5; i++)
-        {
-            cout << "\t";
-        }
         for (int j = 0; j < 24; j++)
         {
             char figure = board[y][x];
