@@ -4,7 +4,7 @@
 using namespace std;
 int main()
 {
-    figure figures[4]; // 0 = Pawn, 1 = kNight, 2 = Rook, 3 = King
+    figure_coordinates figures[4]; // 0 = Pawn, 1 = kNight, 2 = Rook, 3 = King
     srand(time(NULL));
     char board[8][8];
     for (int i = 0; i < 8; i++)
@@ -27,7 +27,7 @@ int main()
     }
     delete temp;
     welcome();
-    drawboard(board);
+    draw_board(board);
 
     char figure_choice;
     string move;
@@ -61,13 +61,13 @@ int main()
                 sleep(3);
                 system("clear");
                 welcome();
-                drawboard(board);
+                draw_board(board);
             }
             else
             {
                 system("clear");
                 welcome();
-                drawboard(board);
+                draw_board(board);
             }
         }
     }

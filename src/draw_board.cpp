@@ -1,8 +1,5 @@
-#ifndef DRAWBOARD_HPP
-#define DRAWBOARD_HPP
-#include <iostream>
-using namespace std;
-void drawboard(char board[8][8])
+#include "draw_board.hpp"
+void draw_board(char board[8][8])
 {
     int field = 0;
     int x = 0;
@@ -81,5 +78,4 @@ void drawboard(char board[8][8])
         x = 0;
         cout << endl;
     }
-};
-#endif
+}

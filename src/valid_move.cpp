@@ -1,6 +1,5 @@
-#ifndef VALIDMOVE_HPP
-#define VALIDMOVE_HPP
-bool validmove(char board[8][8], int next_x, int next_y)
+#include "valid_move.hpp"
+bool valid_move(char board[8][8], int next_x, int next_y)
 {
     bool is_valid = false;
     bool next_x_valid = (next_x >= 0 && next_x <= 7) ? true : false;
@@ -15,4 +14,3 @@ bool validmove(char board[8][8], int next_x, int next_y)
     }
     return is_valid;
 }
-#endif
