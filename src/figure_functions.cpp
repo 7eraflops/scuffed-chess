@@ -1,16 +1,20 @@
 #include "figure_functions.hpp"
+#define PAWN 0
+#define KNIGHT 1
+#define ROOK 2
+#define KING 3
 void pawn(char board[8][8], figure_coordinates figures[4], bool *moved)
 {
-    int x = figures[0].x;
-    int y = figures[0].y;
-    int next_y = figures[0].y - 1;
+    int x = figures[PAWN].x;
+    int y = figures[PAWN].y;
+    int next_y = figures[PAWN].y - 1;
     if (next_y >= 0)
     {
         if (valid_move(board, x, next_y))
         {
             board[next_y][x] = board[y][x];
             board[y][x] = ' ';
-            figures[0].y = next_y;
+            figures[PAWN].y = next_y;
             *moved = true;
         }
         else
@@ -25,7 +29,7 @@ void pawn(char board[8][8], figure_coordinates figures[4], bool *moved)
         {
             board[next_y][x] = board[y][x];
             board[y][x] = ' ';
-            figures[0].y = next_y;
+            figures[PAWN].y = next_y;
             *moved = true;
         }
         else
@@ -37,8 +41,8 @@ void pawn(char board[8][8], figure_coordinates figures[4], bool *moved)
 
 void knight(char board[8][8], figure_coordinates figures[4], string move, bool *moved)
 {
-    int x = figures[1].x;
-    int y = figures[1].y;
+    int x = figures[KNIGHT].x;
+    int y = figures[KNIGHT].y;
     int next_x, next_y;
     char m0 = move[0];
     char m1 = move[1];
@@ -101,8 +105,8 @@ void knight(char board[8][8], figure_coordinates figures[4], string move, bool *
     {
         board[next_y][next_x] = board[y][x];
         board[y][x] = ' ';
-        figures[1].y = next_y;
-        figures[1].x = next_x;
+        figures[KNIGHT].y = next_y;
+        figures[KNIGHT].x = next_x;
         *moved = true;
     }
     else
@@ -113,8 +117,8 @@ void knight(char board[8][8], figure_coordinates figures[4], string move, bool *
 
 void rook(char board[8][8], figure_coordinates figures[4], string move, bool *moved)
 {
-    int x = figures[2].x;
-    int y = figures[2].y;
+    int x = figures[ROOK].x;
+    int y = figures[ROOK].y;
     int next_x, next_y;
     char m0 = move[0];
     char m1 = move[1];
@@ -141,8 +145,8 @@ void rook(char board[8][8], figure_coordinates figures[4], string move, bool *mo
     {
         board[next_y][next_x] = board[y][x];
         board[y][x] = ' ';
-        figures[2].y = next_y;
-        figures[2].x = next_x;
+        figures[ROOK].y = next_y;
+        figures[ROOK].x = next_x;
         *moved = true;
     }
     else
@@ -153,8 +157,8 @@ void rook(char board[8][8], figure_coordinates figures[4], string move, bool *mo
 
 void king(char board[8][8], figure_coordinates figures[4], char move, bool *moved)
 {
-    int x = figures[3].x;
-    int y = figures[3].y;
+    int x = figures[KING].x;
+    int y = figures[KING].y;
     int next_x, next_y;
     switch (move)
     {
@@ -195,8 +199,8 @@ void king(char board[8][8], figure_coordinates figures[4], char move, bool *move
     {
         board[next_y][next_x] = board[y][x];
         board[y][x] = ' ';
-        figures[3].y = next_y;
-        figures[3].x = next_x;
+        figures[KING].y = next_y;
+        figures[KING].x = next_x;
         *moved = true;
     }
     else
