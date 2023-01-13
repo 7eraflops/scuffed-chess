@@ -1,6 +1,11 @@
 #include <string>
 #include <unistd.h>
-#include "include_list.hpp"
+#include "figure_coordinates.hpp"
+#include "randomizer.hpp"
+#include "draw_board.hpp"
+#include "valid_move.hpp"
+#include "figure_functions.hpp"
+#include "text_functions.hpp"
 using namespace std;
 int main()
 {
