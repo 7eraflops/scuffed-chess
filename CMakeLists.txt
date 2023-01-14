@@ -8,6 +8,7 @@ src/randomizer.cpp
 src/draw_board.cpp 
 src/valid_move.cpp 
 src/figure_functions.cpp
+src/text_functions.cpp
 
 include/figure_coordinates.hpp 
 include/randomizer.hpp 

@@ -1,8 +1,12 @@
 #include "figure_functions.hpp"
+#include "valid_move.hpp"
+#include <iostream>
+#include <string>
 #define PAWN 0
 #define KNIGHT 1
 #define ROOK 2
 #define KING 3
+using namespace std;
 void pawn(char board[8][8], figure_coordinates figures[4], bool *moved)
 {
     int x = figures[PAWN].x;
