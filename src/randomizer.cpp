@@ -1,5 +1,4 @@
 #include "randomizer.hpp"
-#include <cstdlib>
 void randomizer(char board[8][8], figure_coordinates figures[4])
 {
     char figure = ' ';

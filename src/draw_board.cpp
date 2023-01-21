@@ -1,5 +1,4 @@
 #include "draw_board.hpp"
-#include <iostream>
 using namespace std;
 void draw_board(char board[8][8])
 {
