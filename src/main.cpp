@@ -6,7 +6,21 @@
 #include "draw_board.hpp"
 #include "figure_functions.hpp"
 #include "text_functions.hpp"
+
 using namespace std;
+
+/*
+- poprawić:
+  - formatowanie kodu
+  - lepsze rozplanowanie kodu (main)
+  - skrócić program 2x (mniej linii - bez oszukiwania)
+  - stan gry w jedym miejscu (tablica enum)
+  - zmienić sposób poruszania się (interaktywne strzałki), biblioteka - ncurses
+  - wskaźniki -> referencje, tam gdzie to możliwe
+  - OO
+  - lepszy CMake
+*/
+
 int main()
 {
     figure_coordinates figures[4]; // 0 = Pawn, 1 = kNight, 2 = Rook, 3 = King
