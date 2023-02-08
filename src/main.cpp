@@ -17,9 +17,7 @@ TODO:
 #include "draw_board.hpp"
 #include "figure_functions.hpp"
 #include "text_functions.hpp"
-
 using namespace std;
-
 int main()
 {
     figure_coordinates figures[4]; // 0 = Pawn, 1 = kNight, 2 = Rook, 3 = King
@@ -54,40 +52,37 @@ int main()
     while (true)
     {
         bool moved = false;
-        while (!moved)
+        cin >> figure_choice;
+        switch (figure_choice)
         {
-            cin >> figure_choice;
-            switch (figure_choice)
-            {
-            case 'p':
-                pawn(board, figures, &moved);
-                break;
-            case 'n':
-                cin >> move;
-                knight(board, figures, move, &moved);
-                break;
-            case 'r':
-                cin >> move;
-                rook(board, figures, move, &moved);
-                break;
-            case 'k':
-                cin >> move;
-                king(board, figures, move[0], &moved);
-                break;
-            }
-            if (!moved)
-            {
-                sleep(3);
-                system("clear");
-                welcome();
-                draw_board(board);
-            }
-            else
-            {
-                system("clear");
-                welcome();
-                draw_board(board);
-            }
+        case 'p':
+            pawn(board, figures, &moved);
+            break;
+        case 'n':
+            cin >> move;
+            knight(board, figures, move, &moved);
+            break;
+        case 'r':
+            cin >> move;
+            rook(board, figures, move, &moved);
+            break;
+        case 'k':
+            cin >> move;
+            king(board, figures, move[0], &moved);
+            break;
+        }
+        if (!moved)
+        {
+            sleep(3);
+            system("clear");
+            welcome();
+            draw_board(board);
+        }
+        else
+        {
+            system("clear");
+            welcome();
+            draw_board(board);
         }
     }
 }
